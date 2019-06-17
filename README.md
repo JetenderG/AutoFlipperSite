@@ -52,12 +52,21 @@ Built With
 [Node.js](https://nodejs.org/en/) Enviromental Javascript Runtime
 [Bootsrap](https://getbootstrap.com/) CSS FrameWork
 [Jquery](https://jquery.com/) Javascript Library
-  "bcrypt": "^3.0.4",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.16.1",
-    "mysql2": "^1.6.4",
-    "path": "^0.12.7",
-    "sequelize": "^4.42.0",
-    "socket.io": "^2.2.0"
+[Bcrypt](https://www.npmjs.com/package/bcrypt) Crypt your Password
+[Dotenv](https://www.npmjs.com/package/dotenv) "load enviromental variable"
+[Express](https://www.npmjs.com/package/express) FrameWork for Node
+[Express-handlebars](https://www.npmjs.com/package/express-handlebars) Lets express be used in Handlebars more simply
+[Express-session](https://www.npmjs.com/package/express-session) Creates Sessions
+[Mysql2](https://www.npmjs.com/package/mysql2) performanced based Client for Node.js
+[Path](https://www.npmjs.com/package/path) Traverse File Pathways
+[Sequelize](https://www.npmjs.com/package/sequelize) ORM for mysql
+[Socket.io](https://www.npmjs.com/package/socket.io) Real-time FrameWork
+
+Authors
+-------
+
+Dakshmalhotra : [Github-Portfolio](https://github.com/dakshmalhotra)
+
+Just Nick : [Github-Portfolio](https://github.com/Mr-Ouya)
+
+FeilongHuang :[GitHub-Portfolio](https://github.com/FeilongHuang)
