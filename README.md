@@ -7,14 +7,14 @@
 A simplified version of the popular website AutoTrader. The site allows user to search for vehicles, add vehicles , and create a account.
 
 
-Requirments
+Requirements
 -----
 
 You'll need four things in order for the site to work.
 
 *node.js*
 
-A run time enviroment that allows to use of javasccript code outside the browser.
+A run time environment that allows to use of javascript code outside the browser.
 
 > you can download the installer  at https://nodejs.org/en/
 
@@ -52,7 +52,7 @@ Installation
 
 > https://github.com/JetenderG/AutoFlipperSite.git
 
-*Install Neccesary Files*
+*Install Necessary Files*
 
 > npm install
 
