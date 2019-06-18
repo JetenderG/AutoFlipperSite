@@ -10,7 +10,14 @@ A simplified version of the popular website AutoTrader. The site allows user to 
 Requirments
 -----
 
-You'll need three things in order for the site to work.
+You'll need four things in order for the site to work.
+
+*node.js*
+
+A run time enviroment that allows to use of javasccript code outside the browser.
+
+> you can download the installer  at https://nodejs.org/en/
+
 
 *MySql Installer*
 
@@ -51,7 +58,7 @@ Installation
 
 *Run*
 
-npm run
+>nodemon server.js
 
 Built With
 --------
