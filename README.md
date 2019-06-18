@@ -12,6 +12,14 @@ Requirments
 
 You'll need three things in order for the site to work.
 
+*MySql Installer*
+
+Allows the use of MySql a database relationale system .
+
+>Link for downloading installer https://dev.mysql.com/downloads/installer/ 
+
+
+
  *MySql WorkBench*
 
 This program allows user to see the database information and other other such thing. 
@@ -24,7 +32,7 @@ The link will tell you how to install it.
 
  Gives you a mySql server in your local machine.
 
-    > https://www.mamp.info/en/
+    > Link to instruction of installing mamp  https://www.mamp.info/en/
 
 
 
