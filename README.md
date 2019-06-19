@@ -64,15 +64,15 @@ Built With
 --------
 
 [React.js](https://reactjs.org/) Front-end Framework
-[Node.js](https://nodejs.org/en/) Enviromental Javascript Runtime
-[Bootsrap](https://getbootstrap.com/) CSS FrameWork
+[Node.js](https://nodejs.org/en/) Environmental Javascript Runtime
+[Bootstrap](https://getbootstrap.com/) CSS FrameWork
 [Jquery](https://jquery.com/) Javascript Library
 [Bcrypt](https://www.npmjs.com/package/bcrypt) Crypt your Password
-[Dotenv](https://www.npmjs.com/package/dotenv) "load enviromental variable"
+[Dotenv](https://www.npmjs.com/package/dotenv) "load environmental variable"
 [Express](https://www.npmjs.com/package/express) FrameWork for Node
 [Express-handlebars](https://www.npmjs.com/package/express-handlebars) Lets express be used in Handlebars more simply
 [Express-session](https://www.npmjs.com/package/express-session) Creates Sessions
-[Mysql2](https://www.npmjs.com/package/mysql2) performanced based Client for Node.js
+[Mysql2](https://www.npmjs.com/package/mysql2) performance based Client for Node.js
 [Path](https://www.npmjs.com/package/path) Traverse File Pathways
 [Sequelize](https://www.npmjs.com/package/sequelize) ORM for mysql
 [Socket.io](https://www.npmjs.com/package/socket.io) Real-time FrameWork
