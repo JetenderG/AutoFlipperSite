@@ -5,7 +5,7 @@ const path = require("path")
 const db = require("./models");
 const session = require("express-session");
 const app = express();
-const PORT = 3000 || process.env.JAWSDB_URL;
+const PORT = process.env.JAWSDB_URL || 3000;
 
 //
 app.use(session({
