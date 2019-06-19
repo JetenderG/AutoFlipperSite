@@ -17,10 +17,10 @@
     "logging": false
   },
   "production": {
-    "username": "c1v5wg1zm1ktvr6i",
-    "password": "gkl69ef08i37bg7o",
-    "database": "fneeq07xxka302mh",
-    "port": "3306",
+    "username": "root",
+    "password": "root",
+    "database": "autoflipper_db",
+    "port": "8889",
     "host": "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "use_env_variable": "JAWSDB_URL",
