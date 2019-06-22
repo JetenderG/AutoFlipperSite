@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "null",
     "database": "autoflipper_db",
     "port": "8889",
     "host": "localhost",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": "null",
     "database": "autoflipper_db",
     "host": "localhost",
     "dialect": "mysql",
@@ -20,9 +20,8 @@
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
     "username": "root",
-    "password": "root",
+    "password": "null",
     "database": "autoflipper_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
   }
 }
