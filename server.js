@@ -6,12 +6,31 @@ const db = require("./models");
 const session = require("express-session");
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+const Sequelize = require("sequelize")
+const sequelizeStore = require("connect-session-sequelize")(session.Store);
 //
+
+//database creation
+var sequelize = new Sequelize(
+
+  "database",
+  "host",
+  "password", {
+    "dialect": "mysql",
+    "storage": "./session.mysql",
+    "socketPath": '/Applications/MAMP/tmp/mysql/mysql.sock'
+
+  })
+//Session
 app.use(session({
   secret: 'fllipper',
-  resave: true,
-  saveUninitalized: true
+  store: new sequelizeStore({
+    db: sequelize,
+    proxy: true
+  }),
+  resave: false,
+  proxy: true
+
 }))
 
 // Middleware

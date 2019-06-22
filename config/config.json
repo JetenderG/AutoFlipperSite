@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "null",
+    "password": "root",
     "database": "autoflipper_db",
     "port": "8889",
     "host": "localhost",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "null",
+    "password": "root",
     "database": "autoflipper_db",
     "host": "localhost",
     "dialect": "mysql",
