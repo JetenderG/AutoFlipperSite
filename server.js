@@ -5,7 +5,7 @@ const path = require("path")
 const db = require("./models");
 const session = require("express-session");
 const app = express();
-const PORT = process.env.JAWSDB_URL || 3000;
+const PORT = process.env.PORT || 3000;
 
 //
 app.use(session({
@@ -27,7 +27,7 @@ app.engine(
   exphbs({
     defaultLayout: "main",
   })
-);//
+); //
 app.set("view engine", "handlebars");
 
 // Routes
