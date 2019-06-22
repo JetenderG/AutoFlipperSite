@@ -5,21 +5,20 @@
     "database": "autoflipper_db",
     "port": "8889",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql2"
   },
   "test": {
     "username": "root",
     "password": "null",
     "database": "autoflipper_db",
     "host": "localhost",
-    "dialect": "mysql",
+    "dialect": "mysql2",
     "port": "8889",
     "logging": false
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql",
-    "Port": "3306",
+    "dialect": "mysql2",
     "username": "root",
     "password": "null",
     "database": "autoflipper_db",
