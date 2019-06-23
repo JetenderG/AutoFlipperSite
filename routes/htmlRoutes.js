@@ -3,11 +3,11 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/autoflipper", function (req, res) {
+  app.get("/", function (req, res) {
 
-    
+
     res.render("index", {
-      
+
     });
   });
 
@@ -19,18 +19,17 @@ module.exports = function (app) {
   // Load example page and pass in an example by id
 
   // Render 404 page for any unmatched routes
-app.get("/autoflipper/sell-your-vehicle", function (req, res) {
+  app.get("/autoflipper/sell-your-vehicle", function (req, res) {
 
-    res.render("sell", {
-    });
+    res.render("sell", {});
   });
-  
+
 
 
   app.get("*", function (req, res) {
     res.render("404");
   });
-  
+
 
   app.get("/results", function (req, res) {
 
@@ -207,12 +206,12 @@ app.get("/autoflipper/sell-your-vehicle", function (req, res) {
       // }
 
     }).then(function (data) {
-      res.render("search",{
+      res.render("search", {
         vehicle
       })
     });
 
   })
 
-  
+
 };
