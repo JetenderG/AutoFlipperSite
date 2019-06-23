@@ -13,9 +13,9 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 //database creation
 var sequelize = new Sequelize(
 
-  "database",
-  "host",
-  "password", {
+  "autoflipper_db",
+  "root",
+  "root", {
     "dialect": "mysql",
     "storage": "./session.mysql",
     "socketPath": '/Applications/MAMP/tmp/mysql/mysql.sock'
