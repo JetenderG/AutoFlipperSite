@@ -11,21 +11,20 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 //
 
 //database creation
-var sequelize = new Sequelize(
+var sequelize = new Sequelize({
 
-  "autoflipper_db",
-  "root",
-  "root", {
-    "dialect": "mysql",
-    "storage": "./session.mysql",
-    "socketPath": '/Applications/MAMP/tmp/mysql/mysql.sock'
-
-  })
+  host: "localhost",
+  database: "autoflipper_db",
+  username: "root",
+  password: "root",
+  storage: "./session.mysql",
+  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+})
 //Session
 app.use(session({
   secret: 'fllipper',
   store: new sequelizeStore({
-    db: sequelize,
+    db: process.env.JAWSDB_URL,
     proxy: true
   }),
   resave: false,

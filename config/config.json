@@ -5,7 +5,9 @@
     "database": "autoflipper_db",
     "port": "8889",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "storage": "./session.mysql"
+
   },
   "test": {
     "username": "root",
@@ -14,12 +16,13 @@
     "host": "localhost",
     "dialect": "mysql",
     "port": "8889",
-    "logging": false
+    "logging": false,
+    "storage": "./session.mysql"
+
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql",
-    "port": "8889"
+    "use_env_variable": "JAWSDB_URL"
+
 
   }
 }
