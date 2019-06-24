@@ -17,7 +17,7 @@ var sequelize = new Sequelize({
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   dialect: "mysql",
-  port = process.env.DB_PORT,
+  port: process.env.DB_PORT,
   storage: "./session.mysql",
   /*host: "localhost",
   database: "autoflipper_db",
