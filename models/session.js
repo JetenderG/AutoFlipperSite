@@ -1,25 +1,27 @@
-module.exports = function (sequelize, DataTypes){
+module.exports = function (sequelize, DataTypes) {
 
 
 
-var Sessions = sequelize.define("sessions",{
+    var Sessions = sequelize.define("sessions", {
 
 
-            sid :{
+            sid: {
                 type: DataTypes.STRING,
-                primaryKey:true
+                primaryKey: true
             },
 
             expires: {
-                type:DataTypes.DATE},
-                data: {
-                    type:DataTypes.STRING(50000)}
-        
-        
+                type: DataTypes.DATE
+            },
+            data: {
+                type: DataTypes.BLOB
+            }
+
+
         }
 
 
-)
+    )
 
-return Sessions;
+    return Sessions;
 }
