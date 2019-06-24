@@ -12,19 +12,24 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //database creation
 var sequelize = new Sequelize({
-
-  host: "localhost",
+  database: process.env.DB,
+  host: process.env.DB_HOST,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  storage: "./session.mysql",
+  /*host: "localhost",
   database: "autoflipper_db",
   username: "root",
   password: "root",
   storage: "./session.mysql",
   socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+  */
 })
 //Session
 app.use(session({
   secret: 'fllipper',
   store: new sequelizeStore({
-    db: process.env.JAWSDB_URL,
+    db: sequelize,
     proxy: true
   }),
   resave: false,
