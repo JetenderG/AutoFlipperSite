@@ -3,9 +3,11 @@
     "username": "root",
     "password": "root",
     "database": "autoflipper_db",
-    "port": "3306",
+    "port": "8889",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "storage": "./session.mysql"
+
   },
   "test": {
     "username": "root",
@@ -13,12 +15,16 @@
     "database": "autoflipper_db",
     "host": "localhost",
     "dialect": "mysql",
-    "port": "3306",
-    "logging": false
+    "port": "8889",
+    "logging": false,
+    "storage": "./session.mysql"
+
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "storage": "./session.mysql"
+
 
   }
 }

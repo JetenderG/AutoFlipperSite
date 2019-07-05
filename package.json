@@ -13,11 +13,19 @@
   "dependencies": {
     "bcrypt": "^3.0.6",
     "connect-session-sequelize": "^6.0.0",
+<<<<<<< HEAD
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
     "handlebars": "^4.1.2",
+=======
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.16.1",
+    "mysql": "^2.17.1",
+>>>>>>> 36201787d8937c9970b5ed315cc2b869ca013111
     "mysql2": "^1.6.5",
     "path": "^0.12.7",
     "sequelize": "^5.9.0",

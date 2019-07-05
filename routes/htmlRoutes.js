@@ -4,6 +4,7 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/autoflipper", function (req, res) {
+<<<<<<< HEAD
         let username = req.session.username;
   
     
@@ -11,6 +12,13 @@ module.exports = function (app) {
     res.render("index", { 
       username
      });
+=======
+
+
+    res.render("index", {
+
+    });
+>>>>>>> 36201787d8937c9970b5ed315cc2b869ca013111
   });
 
   app.get("/autoflipper/login", function (req, res) {
@@ -25,20 +33,26 @@ module.exports = function (app) {
   // Load example page and pass in an example by id
 
   // Render 404 page for any unmatched routes
+<<<<<<< HEAD
 app.get("/autoflipper/sell-your-vehicle", function (req, res) {
   let username = req.session.username;
 
     res.render("sell", {
       username
     });
+=======
+  app.get("/autoflipper/sell-your-vehicle", function (req, res) {
+
+    res.render("sell", {});
+>>>>>>> 36201787d8937c9970b5ed315cc2b869ca013111
   });
-  
+
 
 
   app.get("*", function (req, res) {
     res.render("404");
   });
-  
+
 
   app.get("/results", function (req, res) {
 
@@ -215,12 +229,12 @@ app.get("/autoflipper/sell-your-vehicle", function (req, res) {
       // }
 
     }).then(function (data) {
-      res.render("search",{
+      res.render("search", {
         vehicle
       })
     });
 
   })
 
-  
+
 };

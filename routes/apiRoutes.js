@@ -22,8 +22,7 @@ module.exports = function (app) {
     console.log(yearA, yearB, priceA, priceB)
 
     //Check if Make has been selected 
-    if (req.params.make === "Make") {
-    } else {
+    if (req.params.make === "Make") {} else {
       whereClause.make = req.params.make;
       // return whereClause.model;
     }
@@ -108,21 +107,21 @@ module.exports = function (app) {
       }
     };
     if (whereClause.length == 0) {
-        console.log(data);
+      console.log(data);
       console.log("hi")
       res.status(404).json(data);
-    
-    }else{
-        console.log(whereClause);
-    db.vehicle.findAll({
-      where: whereClause
-    }).then(function (data) {
-      console.log(data);
-      res.json(data)
-    });
+
+    } else {
+      console.log(whereClause);
+      db.vehicle.findAll({
+        where: whereClause
+      }).then(function (data) {
+        console.log(data);
+        res.json(data)
+      });
 
     }
-  
+
   })
 
 
@@ -149,35 +148,35 @@ module.exports = function (app) {
     var saltRounds = 10;
     console.log(req.body);
     db.accounts.findAll({
-      where:{
-        email :req.body.email,
-        username :req.body.username
+      where: {
+        email: req.body.email,
+        username: req.body.username
       }
-    }).then(function(data){
+    }).then(function (data) {
       console.log(data)
-      if (data.length > 1){
+      if (data.length > 1) {
         res.send("UserName or Email has already been used")
-      }else if (data.length < 1){
-       bcrypt.genSalt(saltRounds, function (err, salt) {
-      console.log(req.body.password);
-      if (err) throw err
+      } else if (data.length < 1) {
+        bcrypt.genSalt(saltRounds, function (err, salt) {
+          console.log(req.body.password);
+          if (err) throw err
 
-      bcrypt.hash(req.body.password, salt, function (err, hash) {
-        if (err) throw err;
-        var newaccount = {
-          username: req.body.username,
-          email: req.body.email,
-          password: hash
-        }
-        db.accounts.create(newaccount).then(function (data) {
-          res.redirect("/autoflipper/login")
+          bcrypt.hash(req.body.password, salt, function (err, hash) {
+            if (err) throw err;
+            var newaccount = {
+              username: req.body.username,
+              email: req.body.email,
+              password: hash
+            }
+            db.accounts.create(newaccount).then(function (data) {
+              res.redirect("/autoflipper/login")
+            })
+          })
         })
-      })
-    }) 
       }
     })
 
-    
+
   })
   app.post('/autoflipper/auth', function (request, response) {
     var username = request.body.username;
@@ -193,6 +192,7 @@ module.exports = function (app) {
         if (!results) {
           respond.send('No User Exist');
         } else {
+          console.log(results)
           bcrypt.compare(password, results[0].dataValues.password, function (err, results) {
             if (err) throw err;
             if (results == true) {
