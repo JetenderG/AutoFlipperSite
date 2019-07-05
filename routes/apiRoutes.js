@@ -199,7 +199,7 @@ module.exports = function (app) {
               request.session.loggedin = true;
               request.session.username = username;
               response.redirect('/autoflipper');
-
+              console.log(request.session.username)
             } else {
               response.send("Incorrect Password or Username");
             }
@@ -213,4 +213,10 @@ module.exports = function (app) {
     }
   });
 
+  app.delete("/destroy/session", function (req, res){
+     let sid = req.session.sID
+    store.destroy(req.session.destroy)
+        alert("You Have Been Logged Out")
+    
+  })
 };

@@ -12,10 +12,15 @@ var Sessions = sequelize.define("sessions",{
 
             expires: {
                 type:DataTypes.DATE},
-                data: {
-                    type:DataTypes.STRING(50000)}
+            data: {
+                    type:DataTypes.BLOB
+                
+                },
         
-        
+            id:{
+                type: DataTypes.INTEGER,
+
+            }
         }
 
 

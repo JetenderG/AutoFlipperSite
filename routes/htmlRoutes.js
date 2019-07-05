@@ -4,24 +4,32 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/autoflipper", function (req, res) {
-
+        let username = req.session.username;
+  
     
-    res.render("index", {
-      
-    });
+     
+    res.render("index", { 
+      username
+     });
   });
 
   app.get("/autoflipper/login", function (req, res) {
+    let username = req.session.username;
+
     res.render("login", {
-      msg: "Login into Your Account"
+      
+      msg: "Login into Your Account",
+      username
     });
   });
   // Load example page and pass in an example by id
 
   // Render 404 page for any unmatched routes
 app.get("/autoflipper/sell-your-vehicle", function (req, res) {
+  let username = req.session.username;
 
     res.render("sell", {
+      username
     });
   });
   
