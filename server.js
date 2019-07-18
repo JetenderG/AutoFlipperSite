@@ -20,13 +20,15 @@ var sequelize = new Sequelize({
   dialect: "mysql",
   port: "3306",
   storage: "./session.mysql",
-  /*host: "localhost",
-  database: "autoflipper_db",
-  username: "root",
-  password: "root",
-  storage: "./session.mysql",
-  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
-  */
+  // host: "localhost",
+  // database: "autoflipper_db",
+  // username: "root",
+  // password: "root",
+  // storage: "./session.mysql",
+  // dialect: "mysql",
+  // port: 8889,
+  // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+
 })
 //Session
 app.use(session({

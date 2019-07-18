@@ -4,47 +4,53 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/autoflipper", function (req, res) {
-<<<<<<< HEAD
-        let username = req.session.username;
-  
-    
-     
-    res.render("index", { 
-      username
-     });
-=======
+    let username = req.session.username;
+    console.log(username)
+    if (username === "") {
+      res.render("index", {
+        username
+      });
+
+    } else {
+      res.render("index", {
+        username
+      });
+    }
 
 
-    res.render("index", {
-
-    });
->>>>>>> 36201787d8937c9970b5ed315cc2b869ca013111
   });
 
   app.get("/autoflipper/login", function (req, res) {
     let username = req.session.username;
+    if (username === "") {
+      res.render("login", {
+        username
+      });
 
-    res.render("login", {
-      
-      msg: "Login into Your Account",
-      username
-    });
+    } else {
+      res.render("login", {
+        username
+      });
+    }
+
   });
   // Load example page and pass in an example by id
 
   // Render 404 page for any unmatched routes
-<<<<<<< HEAD
-app.get("/autoflipper/sell-your-vehicle", function (req, res) {
-  let username = req.session.username;
-
-    res.render("sell", {
-      username
-    });
-=======
   app.get("/autoflipper/sell-your-vehicle", function (req, res) {
+    let username = req.session.username;
+    if (username === "") {
+      res.render("sell", {
+        username
+      });
 
-    res.render("sell", {});
->>>>>>> 36201787d8937c9970b5ed315cc2b869ca013111
+    } else {
+      res.render("sell", {
+        username
+      });
+    }
+
+
   });
 
 

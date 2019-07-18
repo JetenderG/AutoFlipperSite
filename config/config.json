@@ -28,7 +28,5 @@
     "dialect": "mysql",
     "port": "3306",
     "storage": "./session.mysql"
-
-
   }
 }

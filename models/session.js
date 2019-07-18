@@ -11,6 +11,7 @@ module.exports = function (sequelize, DataTypes) {
             },
 
             expires: {
+<<<<<<< HEAD
                 type:DataTypes.DATE},
             data: {
                     type:DataTypes.BLOB
@@ -22,6 +23,22 @@ module.exports = function (sequelize, DataTypes) {
 
             }
         }
+=======
+                type: DataTypes.DATE
+            },
+
+            data: {
+                type: DataTypes.BLOB
+
+            },
+
+
+            type: DataTypes.DATE
+        },
+
+
+
+>>>>>>> 2f97b1ae757f1a63045ec683c63765cd214fb4c2
 
 
     )

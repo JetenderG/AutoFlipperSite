@@ -36,6 +36,12 @@ var API = {
       url: "/autoflipperapi/vehicle/" + id,
       type: "DELETE"
     });
+  },
+  loggout: function () {
+    return $.ajax({
+      url: "autoflipper/destroy/session",
+      type: "DELETE"
+    })
   }
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +54,7 @@ $(document).ready(function () {
 })
 
 popMakeSearch(select1Make, popularVehicle);
+
 function popMakeSearch(select, data) {
   console.log(select);
   var firstdrop = select;
@@ -64,12 +71,11 @@ function popMakeSearch(select, data) {
 function popSearchS(select, data) {
   console.log(data);
   // dbSearchEnable()
-        select.remove(".newoptions");
+  select.remove(".newoptions");
 
   var length = select.children("option").length;
   console.log(length);
-  if (length > 1){
-  }
+  if (length > 1) {}
   var firstdrop = select;
   if (firstdrop === selectModel) {
     firstdrop.not(".newoptions");
@@ -151,8 +157,7 @@ function populateResults(arr) {
 }
 /////////////////////////////
 var refreshData = function () {
-  API.getAll().then(function (data) {
-  })
+  API.getAll().then(function (data) {})
 };
 
 /////////////////////////////
@@ -169,8 +174,8 @@ var searchDatabase = function () {
   if (search.minY > search.maxY || search.minP > search.maxP) {
     alert("Invalid Search");
   } else {
-   let newSearch = '/' + search.make + '/' + search.model + '/' + search.minY + "/" + search.maxY + '/' + search.minP + "/" + search.maxP;
-   console.log(newSearch)
+    let newSearch = '/' + search.make + '/' + search.model + '/' + search.minY + "/" + search.maxY + '/' + search.minP + "/" + search.maxP;
+    console.log(newSearch)
     API.getSearch(newSearch).then(function (data) {
       console.log(JSON.stringify(data));
       populateResults(data);
@@ -188,5 +193,6 @@ function dbSearchEnable() {
 /////////////////////////////
 $("#makeSelect1").on("change", optionMake, popNSeachI)
 submitSearch.on("click", searchDatabase);
+$(".logout").on("click", API.loggout)
 
 /* eslint-enable camelcase */
