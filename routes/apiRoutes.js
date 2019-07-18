@@ -213,10 +213,15 @@ module.exports = function (app) {
     }
   });
 
-  app.delete("/destroy/session", function (req, res){
-     let sid = req.session.sID
-    store.destroy(req.session.destroy)
-        alert("You Have Been Logged Out")
-    
+  app.use("/autoflipper/destroy/session", function (req, res) {
+    // let sid = req.session.sID
+    // store.destroy(req.session.sid)
+    req.session.destroy(function (err) {
+      if (err) throw (err);
+    });
+
+
+    alert("You Have Been Logged Out")
+
   })
 };
