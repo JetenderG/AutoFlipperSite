@@ -13,12 +13,12 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //database creation
 var sequelize = new Sequelize({
-  database: process.env.DB,
-  host: process.env.DB_HOST,
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
+  database:"fneeq07xxka302mh",
+  host: "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  username:"c1v5wg1zm1ktvr6i",
+  password:"gkl69ef08i37bg7o",
   dialect: "mysql",
-  port: process.env.DB_PORT,
+  port: "3306",
   storage: "./session.mysql",
   /*host: "localhost",
   database: "autoflipper_db",
