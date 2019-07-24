@@ -13,21 +13,21 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //database creation
 var sequelize = new Sequelize({
-  database:"fneeq07xxka302mh",
-  host: "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  username:"c1v5wg1zm1ktvr6i",
-  password:"gkl69ef08i37bg7o",
-  dialect: "mysql",
-  port: "3306",
-  storage: "./session.mysql",
-  // host: "localhost",
-  // database: "autoflipper_db",
-  // username: "root",
-  // password: "root",
-  // storage: "./session.mysql",
+  // database:"fneeq07xxka302mh",
+  // host: "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  // username:"c1v5wg1zm1ktvr6i",
+  // password:"gkl69ef08i37bg7o",
   // dialect: "mysql",
-  // port: 8889,
-  // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+  // port: "3306",
+  // storage: "./session.mysql",
+  host: "localhost",
+  database: "autoflipper_db",
+  username: "root",
+  password: "root",
+  storage: "./session.mysql",
+  dialect: "mysql",
+  port: 8889,
+  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
 
 })
 //Session
