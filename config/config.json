@@ -1,10 +1,7 @@
+
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "autoflipper_db",
-    "port": "3306",
-    "host": "localhost",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
     "storage": "./session.mysql"
 
@@ -21,12 +18,8 @@
 
   },
   "production": {
-    "database":"fneeq07xxka302mh",
-    "host": "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "username":"c1v5wg1zm1ktvr6i",
-    "password":"gkl69ef08i37bg7o",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
-    "port": "3306",
     "storage": "./session.mysql"
   }
 }

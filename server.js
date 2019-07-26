@@ -12,8 +12,7 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 //
 
 //database creation
-var sequelize = new Sequelize(process.env.JAWSDB_URL);
-
+var sequelize = new Sequelize({
   // database:"fneeq07xxka302mh",
   // host: "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   // username:"c1v5wg1zm1ktvr6i",
@@ -21,7 +20,7 @@ var sequelize = new Sequelize(process.env.JAWSDB_URL);
   // dialect: "mysql",
   // port: "3306",
   // storage: "./session.mysql",
-  // host: "localhost",
+ // host: "localhost",
   // database: "autoflipper_db",
   // username: "root",
   // password: "root",
@@ -29,8 +28,11 @@ var sequelize = new Sequelize(process.env.JAWSDB_URL);
   // dialect: "mysql",
   // port: 3306,
   // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+  use_env_variable: "JAWSDB_URL",
+  dialect: "mysql",
+  storage: "./session.mysql"
 
-
+})
 //Session
 app.use(session({
   secret: 'fllipper',
