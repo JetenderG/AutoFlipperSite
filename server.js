@@ -26,7 +26,7 @@ var sequelize = new Sequelize({
   password: "root",
   storage: "./session.mysql",
   dialect: "mysql",
-  port: 8889,
+  port: 3306,
   socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
 
 })

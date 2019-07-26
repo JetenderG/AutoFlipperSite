@@ -200,6 +200,7 @@ module.exports = function (app) {
               request.session.username = username;
               response.redirect('/autoflipper');
               console.log(request.session.username)
+             location.reload();
             } else {
               response.send("Incorrect Password or Username");
             }
@@ -213,15 +214,17 @@ module.exports = function (app) {
     }
   });
 
-  app.use("/autoflipper/destroy/session", function (req, res) {
+  app.delete("/autoflipper/destroy/session", function (req, res) {
     // let sid = req.session.sID
     // store.destroy(req.session.sid)
+    console.log(req.session);
     req.session.destroy(function (err) {
       if (err) throw (err);
+
+     res.json({sucess:true})
     });
 
 
-    alert("You Have Been Logged Out")
 
   })
 };

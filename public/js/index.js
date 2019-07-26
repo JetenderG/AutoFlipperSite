@@ -39,8 +39,12 @@ var API = {
   },
   loggout: function () {
     return $.ajax({
-      url: "autoflipper/destroy/session",
-      type: "DELETE"
+      url: "/autoflipper/destroy/session",
+      type: "DELETE",
+      success: function(){
+        location.reload()
+        alert('You have been logged out');
+       }
     })
   }
 };

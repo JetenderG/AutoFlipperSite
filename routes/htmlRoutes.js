@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/autoflipper", function (req, res) {
+  app.get("/", function (req, res) {
     let username = req.session.username;
     console.log(username)
     if (username === "") {
