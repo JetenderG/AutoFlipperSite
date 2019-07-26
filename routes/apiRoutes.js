@@ -200,7 +200,6 @@ module.exports = function (app) {
               request.session.username = username;
               response.redirect('/autoflipper');
               console.log(request.session.username)
-             location.reload();
             } else {
               response.send("Incorrect Password or Username");
             }
@@ -208,7 +207,7 @@ module.exports = function (app) {
 
 
           })
-
+location.reload();
         }
       })
     }

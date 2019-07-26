@@ -1,11 +1,15 @@
-require('dotnev').config();
+require('dotenv').config();
 module.exports=
 {
   "development": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": "root",
+    "database": "autoflipper_db",
+    "host": "localhost",
     "dialect": "mysql",
-    "storage": "./session.mysql",
-    "password": "PASSWORD"
+    "port": "3306",
+    "logging": false,
+    "storage": "./session.mysql"
 
 
   },
@@ -21,9 +25,13 @@ module.exports=
 
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": "root",
+    "database": "autoflipper_db",
+    "host": "localhost",
     "dialect": "mysql",
-    "storage": "./session.mysql",
-    "password": "PASSWORD"
+    "port": "3306",
+    "logging": false,
+    "storage": "./session.mysql"
   }
 };

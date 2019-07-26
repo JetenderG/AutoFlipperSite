@@ -1,4 +1,4 @@
-require("dotenv").config();
+//require("dotenv").config();
 const configs = require("./config/config")
 const express = require("express");
 const exphbs = require("express-handlebars");
@@ -62,7 +62,8 @@ db.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
    
       console.log("App runnning on port " + PORT);
-
+    PORT,
+    PORT
   });
 });
 
