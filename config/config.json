@@ -3,7 +3,9 @@
   "development": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
-    "storage": "./session.mysql"
+    "storage": "./session.mysql",
+    "password": "PASSWORD"
+
 
   },
   "test": {
