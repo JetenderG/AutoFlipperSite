@@ -12,7 +12,7 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 //
 
 //database creation
-var sequelize = new Sequelize(use_env_variable);
+var sequelize = new Sequelize(process.env.JAWSDB_URL);
 
   // database:"fneeq07xxka302mh",
   // host: "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
