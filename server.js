@@ -30,7 +30,9 @@ var sequelize = new Sequelize({
   // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
   use_env_variable: "JAWSDB_URL",
   dialect: "mysql",
-  storage: "./session.mysql"
+  storage: "./session.mysql",
+  password: "process.env.PASSWORD"
+
 
 })
 //Session
