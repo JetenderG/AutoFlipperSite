@@ -1,4 +1,5 @@
-
+require('dotnev').config();
+module.exports=
 {
   "development": {
     "use_env_variable": "JAWSDB_URL",
@@ -25,4 +26,4 @@
     "storage": "./session.mysql",
     "password": "PASSWORD"
   }
-}
+};
