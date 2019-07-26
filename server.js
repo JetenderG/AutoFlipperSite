@@ -31,7 +31,7 @@ var sequelize = new Sequelize({
   use_env_variable: "JAWSDB_URL",
   dialect: "mysql",
   storage: "./session.mysql",
-  password: process.env.PASSWORD;
+  password: process.env.PASSWORD
 
 })
 //Session
