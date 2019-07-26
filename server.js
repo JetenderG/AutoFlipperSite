@@ -42,8 +42,8 @@ app.use(session({
     proxy: true
   }),
   resave: false,
-  proxy: true
-
+  proxy: true,
+  saveUninitialized : true
 }))
 
 // Middleware
