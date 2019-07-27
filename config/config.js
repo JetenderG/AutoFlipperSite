@@ -5,20 +5,17 @@ module.exports=
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
     "DATABASE_PASSWORD":process.env.PASSWORD,
-    "Host":"bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "Username":	"uz9b9jrkzrggpoeo"
+    "host":"bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username":	"uz9b9jrkzrggpoeo"
 
 
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "autoflipper_db",
-    "host": "localhost",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
-    "port": "3306",
-    "logging": false,
-    "storage": "./session.mysql"
+    "DATABASE_PASSWORD":process.env.PASSWORD,
+    "Host":"bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username":	"uz9b9jrkzrggpoeo"
 
   },
   "production": {
@@ -26,6 +23,6 @@ module.exports=
     "dialect": "mysql",
     "DATABASE_PASSWORD":process.env.PASSWORD,
     "Host":"bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "Username":	"uz9b9jrkzrggpoeo"
+    "username":	"uz9b9jrkzrggpoeo"
   }
 };
