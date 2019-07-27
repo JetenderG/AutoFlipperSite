@@ -1,18 +1,12 @@
 var db = require("../models");
-//var session = require("express-session");
 module.exports = function (app) {
-  // Load index page
   app.get("/", function (req, res) {
     let username = req.session.username;
     console.log(username)
-    if (username === "") {
+    
       res.render("index", {
-      });
-    } else {
-      res.render("index", {
-      });
     }
-  });
+  )})
   app.get("/autoflipper/login", function (req, res) {
     let username = req.session.username;
     if (username === "") {
@@ -24,8 +18,6 @@ module.exports = function (app) {
       });
     }
   });
-  // Load example page and pass in an example by id
-  // Render 404 page for any unmatched routes
   app.get("/autoflipper/sell-your-vehicle", function (req, res) {
     let username = req.session.username;
     if (username === "") {
