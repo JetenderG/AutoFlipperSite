@@ -1,7 +1,6 @@
 var db = require("../models");
 module.exports = function (app) {
   app.get("/", function (req, res) {
-    let username = req.session.username;
     console.log(username)
     
       res.render("index", {
