@@ -29,7 +29,7 @@ module.exports = function (app) {
 
     } else {
       res.render("login", {
-        username
+        
       });
     }
 
@@ -46,7 +46,7 @@ module.exports = function (app) {
 
     } else {
       res.render("sell", {
-        username
+        
       });
     }
 
