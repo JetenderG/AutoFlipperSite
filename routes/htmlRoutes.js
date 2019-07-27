@@ -8,12 +8,12 @@ module.exports = function (app) {
     console.log(username)
     if (username === "") {
       res.render("index", {
-        username
+        
       });
 
     } else {
       res.render("index", {
-        username
+        
       });
     }
 
