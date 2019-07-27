@@ -14,17 +14,8 @@ const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //database creation
 var sequelize = new Sequelize(configs.production)
-//Session
-app.use(session({
-  secret: 'fllipper',
-  store: new sequelizeStore({
-    db: sequelize,
-    proxy: true
-  }),
-  resave: false,
-  proxy: true,
-  saveUninitialized : true
-}))
+//Sessiong
+
 
 // Middleware
 app.use(express.urlencoded({
