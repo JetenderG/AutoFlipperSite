@@ -18,7 +18,7 @@ var sequelize = new Sequelize(configs.production)
 app.use(session({
   secret: 'fllipper',
   store: new sequelizeStore({
-    db: sequelize,
+    db: db.sequelize,
     proxy: true
   }),
   resave: false,
