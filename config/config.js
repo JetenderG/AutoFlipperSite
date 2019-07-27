@@ -4,7 +4,7 @@ module.exports=
   "development": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
-    "password":"password"
+    "DATABASE_PASSWORD":"password"
 
 
 
@@ -23,6 +23,6 @@ module.exports=
   "production": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
-    "password":"password"
+    "DATABASE_PASSWORD":"password"
   }
 };
